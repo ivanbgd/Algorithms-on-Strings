@@ -50,7 +50,6 @@ def count_occurrences(pattern, bwt, starts, occ_counts_before):
     given only Burrows-Wheeler Transform, bwt, of the text, and additional
     information we get from the preprocessing stage - starts and occ_counts_before.
     """
-    # Implement this function yourself
     dim = len(bwt)
     top = 0
     bottom = dim - 1
