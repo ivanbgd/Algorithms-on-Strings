@@ -1,5 +1,7 @@
 import sys
 
+# The fastest solution, by far.
+
 """
 This solution is NOT generalized, in the sense that it does depend on the alphabet.
 This solution uses the Counting Sort algorithm to sort the "bwt" into the first column.
