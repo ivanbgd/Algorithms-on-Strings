@@ -1,5 +1,11 @@
 import sys
 
+"""
+It is the fastest to work with a pre-defined alphabet, obviously, like we do here.
+But, if we'd like to make our solution general, we could actually "find out" about the alphabet
+by creating a set of "text" and then sorting that set in ascending order.
+"""
+
 ALPHABET = ('$', 'A', 'C', 'G', 'T')
 
 
