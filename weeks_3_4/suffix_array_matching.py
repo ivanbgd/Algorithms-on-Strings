@@ -87,20 +87,23 @@ def build_suffix_array(text, alphabet):
 
 
 def pattern_matching_with_suffix_array(text, pattern, suffix_array):
+    text_len = len(text)
+    patt_len = len(pattern)
+
     min_ind = 0
-    max_ind = len(text)
+    max_ind = text_len
     while min_ind < max_ind:
         mid_ind = (min_ind + max_ind) // 2
-        if pattern > text[suffix_array[mid_ind]: min(suffix_array[mid_ind] + len(pattern), len(text))]:
+        if pattern > text[suffix_array[mid_ind]: min(suffix_array[mid_ind] + patt_len, text_len)]:
             min_ind = mid_ind + 1
         else:
             max_ind = mid_ind
     start = min_ind
 
-    max_ind = len(text)
+    max_ind = text_len
     while min_ind < max_ind:
         mid_ind = (min_ind + max_ind) // 2
-        if pattern < text[suffix_array[mid_ind]: min(suffix_array[mid_ind] + len(pattern), len(text))]:
+        if pattern < text[suffix_array[mid_ind]: min(suffix_array[mid_ind] + patt_len, text_len)]:
             max_ind = mid_ind
         else:
             min_ind = mid_ind + 1
