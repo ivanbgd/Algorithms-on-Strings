@@ -135,9 +135,6 @@ if __name__ == "__main__":
     pattern_count = int(sys.stdin.readline().strip())
     patterns = sys.stdin.readline().strip().split()
 
-    # alphabet = ALPHABET = ('$', 'A', 'C', 'G', 'T')
-    # alphabet = sorted(set(text + '$'))
-
     text += '$'
     alphabet = sorted(set(text))
     # print(alphabet)
