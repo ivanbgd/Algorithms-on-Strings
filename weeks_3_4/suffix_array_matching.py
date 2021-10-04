@@ -83,7 +83,7 @@ def build_suffix_array(text, alphabet):
         order = sort_doubled(text, length, order, klass)
         klass = update_classes(order, klass, length)
         length *= 2
-    return order[1:]
+    return order
 
 
 def pattern_matching_with_suffix_array(text, pattern, suffix_array):
@@ -115,7 +115,7 @@ def pattern_matching_with_suffix_array(text, pattern, suffix_array):
 def find_occurrences(text, patterns, alphabet):
     occurrences = set()
 
-    suffix_array = build_suffix_array(text + '$', alphabet)
+    suffix_array = build_suffix_array(text, alphabet)
     # print(f"suffix_array = {suffix_array}")
     for pattern in patterns:
         result = pattern_matching_with_suffix_array(text, pattern, suffix_array)
