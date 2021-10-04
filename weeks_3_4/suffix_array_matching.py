@@ -104,7 +104,7 @@ def pattern_matching_with_suffix_array(text, pattern, suffix_array):
             max_ind = mid_ind
         else:
             min_ind = mid_ind + 1
-    end = max_ind - 1
+    end = max_ind
 
     if start > end:
         return None
@@ -122,7 +122,7 @@ def find_occurrences(text, patterns, alphabet):
         # print(result)
         if result is not None:
             start, end = result
-            for i in range(start, end + 1):
+            for i in range(start, end):
                 pos = suffix_array[i]
                 # print(pos)
                 occurrences.add(pos)
