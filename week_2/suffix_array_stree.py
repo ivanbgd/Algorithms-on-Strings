@@ -20,7 +20,7 @@ We use the iterative approach to traversing the tree.
 """
 
 
-ALPHABET = ('$', 'A', 'C', 'G', 'T')
+# ALPHABET = ('$', 'A', 'C', 'G', 'T')
 
 
 class Node:
@@ -72,7 +72,7 @@ def _build_tree(text):
 
 
 def _traverse_tree_pre_order_(tree):
-    """DFS pre-order, but modified to effectively emulate in-order in this assignment
+    """DFS pre-order, but modified to effectively emulate in-order
 
        Only the leaf nodes' starting positions in text are printed.
        Leaves are the only nodes to have those starting positions anyway.
@@ -90,7 +90,7 @@ def _traverse_tree_pre_order_(tree):
 
 
 def _traverse_tree_pre_order(tree):
-    """DFS pre-order, but modified to effectively emulate in-order in this assignment
+    """DFS pre-order, but modified to effectively emulate in-order
 
        Only the leaf nodes' starting positions in text are printed.
        Leaves are the only nodes to have those starting positions anyway.
