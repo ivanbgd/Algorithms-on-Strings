@@ -29,7 +29,7 @@ from collections import deque
 
 class Node:
     """
-    Node contains unique ID, starting point in text (relevant for both internal nodes and leaves),
+    A Node contains the starting point in text (relevant for both internal nodes and leaves),
     the substring length, and position in text at which the path to the leaf node begins, in case of leaf nodes only.
     """
 
