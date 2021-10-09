@@ -10,7 +10,7 @@ and maintain the order of the children, but I have borrowed my own implementatio
 The implementation is general because it uses a dictionary for children, where the order between them
 is not defined. This has nothing to do with the order of insertion into the dictionary. We mean the comparison order,
 which is lexicographical (alphabetical).
-So, it was easier for me to make traversal take care of the order of visiting children, since it was possible to do.
+So, it was easier for me to make traversal take care of the order of visiting children, since it was possible to do it.
 
 The order that we need in this problem is the "in-order" traversal of the tree.
 We are not printing internal nodes (root included). We only print leaves. This makes it possible to use the "pre-order"
