@@ -2,18 +2,17 @@
 
     Each suffix adds one leaf and at most one internal node to the suffix tree.
     A suffix tree may have more than one internal node on a path from root to a leaf. Example: "ATAAATG$" (Sample 3).
-    Internal edges may be longer than one character. Example: "panamabananas".
+    Internal edges may be longer than one character. Example: "panamabananas$".
 
     We store edges in nodes. More precisely, we store their starting position in text, and their length.
     We can print them easily this way AND we also save memory by storing only position and length instead of substring.
     Additionally, we store the position in text at which the path to the leaf node begins, in case of leaf nodes only.
-    This is not required in this assignment.
 
     Sample cases:
     1) "A$" => "A$", "$"
     2) "ACA$" => "$", "A", "$", "CA$", "CA$"
     3) "ATAAATG$" => "AAATG$", "G$", "T", "ATG$", "TG$", "A", "A", "AAATG$", "G$", "T", "G$", "$"
-    4) "AAA$" => "A", "$", "$", "A$", "AA$"
+    4) "AAA$" => "A", "$", "$", "A", "$", "A$"
 
     This solution is generalized, in the sense that it doesn't depend on the alphabet.
     The implementation is general because it uses a dictionary for children, where the order between them
