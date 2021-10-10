@@ -12,7 +12,7 @@
     1) "A$" => "A$", "$"
     2) "ACA$" => "$", "A", "$", "CA$", "CA$"
     3) "ATAAATG$" => "AAATG$", "G$", "T", "ATG$", "TG$", "A", "A", "AAATG$", "G$", "T", "G$", "$"
-    4) "AAA$" => "A", "$", "$", "A$", "AA$"
+    4) "AAA$" => "A", "$", "$", "A", "$", "A$"
 
     This solution is generalized, in the sense that it doesn't depend on the alphabet.
     The implementation is general because it uses a dictionary for children, where the order between them
